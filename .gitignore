@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.idea/workspace.xml
+.idea
+logs/
+__pycache__/
+*.py[cod]           # 编译后的 Python 文件
+*.so                # C 扩展库
+*.egg-info/         # setuptools 生成的元数据
+dist/               # 打包后的分发文件
+build/              # 构建目录
+pip-log.txt         # pip 日志

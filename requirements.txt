@@ -1,0 +1,31 @@
+# 数据处理
+pandas>=2.0.3
+numpy>=1.24.4
+fastapi
+
+# 绘图
+matplotlib>=3.5.0
+
+# 网络请求
+requests>=2.28.0
+
+# 时间任务和服务（可选）
+fastapi>=0.115.12
+apscheduler>=3.11.0
+
+# 时间处理
+python-dateutil>=2.8.2
+pytz>=2022.1
+
+ta_lib>=0.6.3
+httpx
+scipy
+uvicorn
+Pillow==10.0.0
+tweepy
+dotenv
+pilmoji
+emoji==1.7.0
+openai
+
+
