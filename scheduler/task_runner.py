@@ -158,30 +158,10 @@ async def scan_all_symbols():
             except Exception as e:
                 logger.info(f"[ERROR] 获取 {item['symbol']} 数据失败: {e}")
 
-async def scan_test_symbols():
-
-    signal_data = {
-        "symbol": "BTCUSDT",
-        "interval": "4h",
-        "signal_type": "hammer",
-        "type": "long",
-        "timestamp": "2025-10-20T12:01:00",
-        "entry_price": 108436.2,
-        "stop_loss": 107350.1,
-        "take_profit": 110608.4,
-        "tp_mult": 2,
-        "rsi": 34.21
-    }
-    df = fetch_klines_by_market('binance','BTCUSDT','4h', limit=120)
-    llm_result = await analyze_with_llm(signal_data, df)
-    print("=== LLM 原始分析 ===")
-    print(json.dumps(llm_result, indent=2, ensure_ascii=False))
-
-
 
 def start_scheduler():
     if not scheduler.running:
-        scheduler.add_job(scan_test_symbols,
+        scheduler.add_job(scan_all_symbols,
                           "cron",
                           minute="*/15",
                           timezone="UTC")
