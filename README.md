@@ -46,7 +46,8 @@
 
 
 ```
-
+## 效果预览
+![alt text](image.png)
 
 ## 核心功能包括：
 - 定时扫描选定交易对（symbols）及时间周期（intervals）  
